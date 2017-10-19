@@ -33,6 +33,13 @@
 
 ![image](http://jaeger.readthedocs.io/en/latest/images/traces-ss.png)
 
+## 作用
+- 分布式环境下信息传播
+- 分布式交易监控
+- 展示跨进程调用链
+- 性能优化
+- 定位问题
+
 ## 特性
 
 * 使用udp传输数据，相对于HTTP，优点在于，不用担心Jaeger服务宕机或者网络传输有问题而影响正常的业务。缺点就是丢包，影响了整条调用链。
