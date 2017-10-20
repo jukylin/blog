@@ -1,3 +1,5 @@
+![image](http://jaeger.readthedocs.io/en/latest/images/architecture.png)
+
 ## 前言
 
 > &emsp; 随着公司的发展，业务不断的增加，模块的不断拆分，系统间业务调用就变得越复杂，对定位线上故障带来很大困难。整个调用链不透明，犹如系统被蒙上一块黑纱，当线上遇到故障时，整个技术部就陷入痛苦的漩涡。这时候分布式追踪系统应运而生，如揭开了黑纱，让阳光照进黑暗。
@@ -26,8 +28,6 @@
 * [opentracing文档中文版 ( 翻译 ) 吴晟](https://wu-sheng.gitbooks.io/opentracing-io/content/)
 
 ## 分布式追踪系统Jaeger
-
-![image](http://jaeger.readthedocs.io/en/latest/images/architecture.png)
 
 > &emsp;[Jaeger](https://uber.github.io/jaeger/)是Uber开发的一套分布式追踪系统，已在Uber大规模使用。并在[2017-9-13 加入CNCF 开源组织](https://www.cncf.io/blog/2017/09/13/cncf-hosts-jaeger/)。使用Jaeger可以非常直观的展示整个分布式系统的调用链，由此可以很好发现和解决问题：
 
