@@ -1,6 +1,6 @@
 ## TChannel 接收 agent 提交过来的数据
 
-> github.com/uber/jaeger/cmd/collector/app/span_handler.go #69
+> github.com/jaegertracing/jaeger/cmd/collector/app/span_handler.go #69
 
 ```
 func (jbh *jaegerBatchesHandler) SubmitBatches(ctx thrift.Context, batches []*jaeger.Batch) ([]*jaeger.BatchSubmitResponse, error) {
@@ -34,7 +34,7 @@ func (jbh *jaegerBatchesHandler) SubmitBatches(ctx thrift.Context, batches []*ja
 
 ## 经过处理后数据放入BoundedQueue(有界队列)
 
-> github.com/uber/jaeger/cmd/collector/app/span_processor.go #130
+> github.com/jaegertracing/jaeger/cmd/collector/app/span_processor.go #130
 
 ```
 func (sp *spanProcessor) enqueueSpan(span *model.Span, originalFormat string) bool {
@@ -60,7 +60,7 @@ func (sp *spanProcessor) enqueueSpan(span *model.Span, originalFormat string) bo
 
 ## 启用50个协成，处理队列消息
 
-> github.com/uber/jaeger/pkg/queue/bounded_queue.go #53
+> github.com/jaegertracing/jaeger/pkg/queue/bounded_queue.go #53
 
 ```
 func (q *BoundedQueue) StartConsumers(num int, consumer func(item interface{})) {
@@ -99,7 +99,7 @@ func (q *BoundedQueue) StartConsumers(num int, consumer func(item interface{})) 
 
 ## 从队列拿出来后经过处理，把数据存入cassandra数据库
 
-> github.com/uber/jaeger/cmd/collector/app/span_processor.go #101
+> github.com/jaegertracing/jaeger/cmd/collector/app/span_processor.go #101
 
 
 ```
@@ -114,7 +114,7 @@ func (sp *spanProcessor) saveSpan(span *model.Span) {
 }
 ```
 
-> github.com/uber/jaeger/plugin/storage/cassandra/spanstore/writer.go #122
+> github.com/jaegertracing/jaeger/plugin/storage/cassandra/spanstore/writer.go #122
 
 
 ```
@@ -166,7 +166,7 @@ func (s *SpanWriter) WriteSpan(span *model.Span) error {
 
 > 借助缓存，Jaeger实现不重复写入Service和OperationName，是否已经写入通过缓存判断，不查询cassandra，减少了查询压力。
 
-> github.com/uber/jaeger/plugin/storage/cassandra/spanstore/service_names.go #69
+> github.com/jaegertracing/jaeger/plugin/storage/cassandra/spanstore/service_names.go #69
 
 ```
 func (s *ServiceNamesStorage) Write(serviceName string) error {
