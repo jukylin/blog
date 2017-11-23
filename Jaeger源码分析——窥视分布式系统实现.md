@@ -11,7 +11,7 @@
 
 ## Agent ——3部曲
 
-> &emsp;agent处于jaeger-client和collector之间，属于代理的作用，主要是把client发送过来的数据从thrift转为[Batch](https://github.com/jaegertracing/jaeger/blob/master/thrift-gen/jaeger/ttypes.go#L1582)，并通过RPC批量提交到collector。
+> &emsp;Agent处于jaeger-client和collector之间，属于代理的作用，主要是把client发送过来的数据从thrift转为[Batch](https://github.com/jaegertracing/jaeger/blob/master/thrift-gen/jaeger/ttypes.go#L1582)，并通过RPC批量提交到collector。
 
 #### 初始化agent
 
