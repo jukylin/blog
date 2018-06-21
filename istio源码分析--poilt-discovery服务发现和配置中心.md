@@ -15,7 +15,7 @@
 > v1版本API和v2版本API有一段历史，详情可看[官网博客](https://blog.envoyproxy.io/the-universal-data-plane-api-d15cec7a)。在envoy开源之初，使用HTTP+轮询的方式实现动态服务发现和配置，但是这种方式存在以下缺点：
  1. 由于接口数据使用弱类型，导致实现一些通用服务比较困难。
  2. 控制面更喜欢使用推送的方式，来减少数据在更新时传输的时间。
- > 随着和Google合作加强，官方使用GRPC + push开发了v2版本API，实现了v1版本的SDS/CDS/RDS/LDS接口，继续支持```JSON/YAML```数据格式，还增加了ADS（把SDS/CDS/RDS/LDS4个接口合在一下），HDS等接口。
+> 随着和Google合作加强，官方使用GRPC + push开发了v2版本API，实现了v1版本的SDS/CDS/RDS/LDS接口，继续支持```JSON/YAML```数据格式，还增加了ADS（把SDS/CDS/RDS/LDS4个接口合在一下），HDS等接口。
 
 ## 建立基础缓存数据
 > 其实pilot-discovery已经算是一个小型的非持久性key/value数据库了，它把istio的配置信息和服务注册信息都进行了缓存。这样可以使配置更快的生效。 
