@@ -1,6 +1,9 @@
 
 ![image](https://upload.cc/i1/2018/07/19/U8VNjp.png)
 
+## 声明
+
+
 ## 遥测报告是什么
 > &nbsp;&nbsp;&nbsp;&nbsp;这篇文章主要介绍mixer提供的一个GRPC接口，这个接口负责接收envoy上报的日志，并将日志在stdio和prometheus展现出来。 “遥测报告”这个词是从[istio的中文翻译文档](http://istio.doczh.cn/blog/2017/adapter-model.html)借过来，第一次听到这个词感觉很陌生，很高大上。通过了解源码，用**“日志订阅“**这个词来理解这个接口的作用会容易点。用一句话来总结这个接口的功能：我有这些日志，你想用来做什么？stdio和prometheus只是这些日志的另一种展示形式。
 ```
