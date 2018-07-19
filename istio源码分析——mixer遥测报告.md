@@ -74,13 +74,13 @@ type ReportRequest struct {
 
 #### globalList
 ```
-> istio.io/istio/mixer/pkg/attribute/list.gen.go #13
-    globalList = []string{
-      "source.ip",
-      "source.port",
-      "source.name",
-      ......
-    }
+istio.io/istio/mixer/pkg/attribute/list.gen.go #13
+globalList = []string{
+    "source.ip",
+    "source.port",
+    "source.name",
+    ......
+}
 ```
 #### UpdateBagFromProto
 ```
