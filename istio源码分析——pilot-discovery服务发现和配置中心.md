@@ -6,7 +6,7 @@
 1. 这篇文章需要了解istio，k8s，golang，envoy基础知识
 2. 分析的环境为k8s，istio版本为0.8.0
 
-## poilt-discovery的作用
+## pilot-discovery的作用
 
 > envoy提供一套通用的数据面接口，通过接口可以动态实现服务发现和配置。在istio中需要集成k8s，consul等服务发现系统，所以需要一个中介整理在k8s，consul服务注册和配置信息，并提供给envoy。
 
