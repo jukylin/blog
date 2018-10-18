@@ -48,7 +48,7 @@ docker run -itd -v $KUBECONFIG:$HOME/.kube/config -p9100:9100
 
 * k8s
 ```
-apply -f https://raw.githubusercontent.com/jukylin/istio-ui/master/istio-ui.yaml
+kubectl apply -f https://raw.githubusercontent.com/jukylin/istio-ui/master/istio-ui.yaml
 ```
 
 ### 新手任务
