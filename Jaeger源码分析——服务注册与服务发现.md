@@ -40,7 +40,7 @@ func (m *PeerListManager) ensureConnections() {
     peers := m.peers.Copy()
     minPeers := m.getMinPeers(peers)
     numConnected, notConnected := m.findConnected(peers)
-    //只要有3个有效服务，就不会进行健康检查
+    //有一定量的链接，就不进行健康检查
     if numConnected >= minPeers {
       return
     }
