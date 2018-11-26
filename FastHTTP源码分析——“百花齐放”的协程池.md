@@ -1,5 +1,6 @@
 ## 声明
 &nbsp;&nbsp;&nbsp;&nbsp;阅读本编文章需要go语言基础和对资源池有一些了解。
+
 &nbsp;&nbsp;&nbsp;&nbsp;go 版本为1.11，[FastHTTP](https://github.com/valyala/fasthttp/blob/master/workerpool.go)为2018-11-23的最新master版本
 
 ## 前言
@@ -166,4 +167,4 @@ ok  	study_go/gopool	72.891s
 
 
 ## 结语
-> &nbsp;&nbsp;&nbsp;&nbsp;[FastHTTP](https://github.com/valyala/fasthttp/blob/master/workerpool.go)在性能优化上花了很多的精力，协程池只是其中一个，其他方面的优化也很有参考价值。还需要学习消化。
+> &nbsp;&nbsp;&nbsp;&nbsp;[FastHTTP](https://github.com/valyala/fasthttp/blob/master/workerpool.go)协程池的实现方式在我所了解的几种实现中，性能是比较突出的，当然其他协程池的实现方式也很有学习参考价值，在这个过程中顺便复习了链表，数组栈，环形队列的使用场景。收获颇多。
