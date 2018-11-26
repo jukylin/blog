@@ -11,6 +11,9 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;这2种实现中，个人比较喜欢第二种按需创建，[FastHTTP](https://github.com/valyala/fasthttp/blob/master/workerpool.go)也是使用第二种方式，所以我们来看看它是如何实现的。
 
+## FastHTTP协程池简介
+&nbsp;&nbsp;&nbsp;&nbsp;在介绍[FastHTTP](https://github.com/valyala/fasthttp/blob/master/workerpool.go)协程池之前先做一下简单的介绍。[workerChan](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L42)和协程一一对应，相同的生命周期，可以把[workerChan](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L42)看成是协程的门牌，使用凭证，引路子等。 整个协程池的实现主要由[workerPool](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L16)和[workerChan](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L42)组成。[FastHTTP](https://github.com/valyala/fasthttp/blob/master/workerpool.go)的协程池使用按需创建的方式，当有一个请求进来时创建一个协程，请求处理完成，就会把协程的[workerChan](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L42)放入[workerPool](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L16)的数组栈[[workerPool.ready](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L31)]里面，当有新的请求就从[workerPool.ready](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L31)获取[workerChan](https://github.com/valyala/fasthttp/blob/master/workerpool.go#L42)，复用协程，以此循环。
+
 ## 协程池用在哪里
 * go官方原生 ``` http.Server```
 
@@ -167,4 +170,4 @@ ok  	study_go/gopool	72.891s
 
 
 ## 结语
-> &nbsp;&nbsp;&nbsp;&nbsp;[FastHTTP](https://github.com/valyala/fasthttp/blob/master/workerpool.go)协程池的实现方式在我所了解的几种实现中，性能是比较突出的，当然其他协程池的实现方式也很有学习参考价值，在这个过程中顺便复习了链表，数组栈，环形队列的使用场景。收获颇多。
+> &nbsp;&nbsp;&nbsp;&nbsp;[FastHTTP](https://github.com/valyala/fasthttp/blob/master/workerpool.go)协程池的实现方式是我所了解的几种实现中，性能是比较突出的，当然其他协程池的实现方式也很有学习参考价值，在这个过程中复习了链表，数组栈，环形队列的使用场景。收获颇多。
