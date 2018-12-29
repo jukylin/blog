@@ -1,3 +1,5 @@
+![image](https://upload.cc/i1/2018/12/29/EZfJzo.png)
+
 ## 声明 
 * [tchannel-go](https://github.com/uber/tchannel-go/tree/v1.12.0)版本为v1.12.0
 * 阅读本篇文章需要go语言，HTTP2——多路复用基础
