@@ -98,7 +98,7 @@ func (p *Peer) getActiveConnLocked() (*Connection, bool) {
 ```
 > &nbsp;&nbsp;&nbsp;&nbsp;复用链接是多路复用很关键的一步，和HTTP的复用不同，HTTP链接需要响应成功后才能被复用，而多路复用链接只要被创建了就能被复用。
 
-### 消息交换（MessageExchange） —— 无序响应 
+### 消息交换 —— 无序响应 
 ```
 github.com/uber/tchannel-go/mex.go #306
 func (mexset *messageExchangeSet) newExchange(ctx context.Context, framePool FramePool,
