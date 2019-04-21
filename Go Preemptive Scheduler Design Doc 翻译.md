@@ -1,4 +1,9 @@
+## 声明
+* 不是最终稿，还需要修整
+
 原文：[Go Preemptive Scheduler Design Doc](https://docs.google.com/document/d/1ETuA2IOmnaQ4j81AtTGT40Y4_Jr6_IDASEKg0t0dBR8/edit#heading=h.3pilqarbrc9h)（需要翻墙）
+
+
 
 ## 问题
 
