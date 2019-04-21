@@ -1,9 +1,8 @@
-## 声明
-* 不是最终稿，还需要修整
 
 原文：[Go Preemptive Scheduler Design Doc](https://docs.google.com/document/d/1ETuA2IOmnaQ4j81AtTGT40Y4_Jr6_IDASEKg0t0dBR8/edit#heading=h.3pilqarbrc9h)（需要翻墙）
 
-
+## 声明
+* 不是最终稿，还需要修整
 
 ## 问题
 
@@ -149,8 +148,6 @@ CALL	$runtime.preempt(SB)  // can be further moved onto cold path
 nopreempt:
  ```
  10, 11点还没在Go1.2实现
- 
- 
 
  
  ## 非抢占区域
@@ -161,6 +158,7 @@ nopreempt:
  * 内存分配中或gc在进行的时候
  * 不是Grunning状态
  * 没有 P 或 P的状态不是Prunning
+ 
  涵盖了大多数不需要抢占的情况。但是，仍有一些个例。进过我鉴定在调度器有2个地方：```runtime.newproc()``` 和 ```runtime.ready()```，在这两种情况下，Goroutine都可以在局部变量中持有P；这太糟了，如果```stoptheworld```，就会导致死锁(P永远不会停止)。
 Chans受到锁的保护，hashmap似乎是安全的。
 通常方案是：在共享数据结构（e.g. chans, hashmaps, scheduler, memory allocator, etc）处于不一致状态时，抢占必须被禁用，这个不一致会破坏调度器或GC。
@@ -169,6 +167,7 @@ Chans受到锁的保护，hashmap似乎是安全的。
  
 ## 术语介绍
 *  precise GC
+
 [How does Go's precise GC work?](https://stackoverflow.com/questions/26422896/how-does-gos-precise-gc-work)
 
 [Precise Garbage Collection in C](https://www2.cs.arizona.edu/~collberg/Teaching/553/2011/Resources/pankhuri-slides.pdf)
