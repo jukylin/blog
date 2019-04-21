@@ -1,3 +1,5 @@
+原文：[Go Preemptive Scheduler Design Doc](https://docs.google.com/document/d/1ETuA2IOmnaQ4j81AtTGT40Y4_Jr6_IDASEKg0t0dBR8/edit#heading=h.3pilqarbrc9h)（需要翻墙）
+
 ## 问题
 
  1. 由于没有抢占调度，导致一些用户程序的行为明显不当，一个协程可以一直运行，没有切换到其他协程，定时器也没起作用。
