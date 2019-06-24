@@ -10,7 +10,7 @@
 
 - 涉及实现细节，需要有[Stack Frame](http://www.cs.uwm.edu/classes/cs315/Bacon/Lecture/HTML/ch10s07.html)和指针操作基础。
 
-- ## 前言
+## 前言
 
 在1.4版本之前go的协程栈管理使用[分段栈](https://gcc.gnu.org/wiki/SplitStacks)机制实现。实现方式：当检测到函数需要更多栈时，分配一块新栈，旧栈和新栈使用指针连接起来，函数返回就释放。 这样的机制存在2个问题：
 
