@@ -8,7 +8,7 @@
 
 - 灵感来自[Contiguous stacks](https://docs.google.com/document/d/1wAaf1rYoM4S4gtnPh0zOlGzWtrZFQ5suE8qr2sD8uWQ/pub)
 
-- 设计实现细节，需要有[Stack Frame](http://www.cs.uwm.edu/classes/cs315/Bacon/Lecture/HTML/ch10s07.html)和指针操作基础。
+- 涉及实现细节，需要有[Stack Frame](http://www.cs.uwm.edu/classes/cs315/Bacon/Lecture/HTML/ch10s07.html)和指针操作基础。
 
 - ## 前言
 
