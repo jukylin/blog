@@ -4,7 +4,7 @@
 
 ```
 nsq_to_http --channel=ch --topic=test \
---post="http://api-coupon.etcchebao.com/coupon/test" \
+--post="" \
 --nsqd-tcp-address=127.0.0.1:4150 \
 --content-type="application/x-www-form-urlencoded"
 ```
