@@ -73,7 +73,7 @@
 5. [php](https://github.com/jukylin/jaeger-php)
 
  
-> 官方提供了 go，java，node，python客户端，其他客户端还在开放中，[php客户端](https://github.com/jukylin/jaeger-php)为个人开发【欢迎start】
+> 官方提供了 go，java，node，python客户端，其他客户端还在开放中，[php客户端](https://github.com/jukylin/jaeger-php)为个人开发【欢迎star】
 
 
 
