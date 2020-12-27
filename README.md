@@ -35,3 +35,6 @@
 
 ## Esim
 - [探索微服务应用架构](https://github.com/jukylin/blog/blob/master/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E6%8E%A2%E7%B4%A2.md)
+
+## 微服务总结
+- [为什么选择微服务](https://github.com/jukylin/blog/blob/master/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E5%BE%AE%E6%9C%8D%E5%8A%A1.md)
