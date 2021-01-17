@@ -39,3 +39,4 @@
 ## 微服务总结
 - [为什么选择微服务](https://github.com/jukylin/blog/blob/master/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E5%BE%AE%E6%9C%8D%E5%8A%A1.md)
 - [服务拆分](https://github.com/jukylin/blog/blob/master/%E6%9C%8D%E5%8A%A1%E6%8B%86%E5%88%86.md)
+- [服务分层](https://github.com/jukylin/blog/blob/master/%E6%9C%8D%E5%8A%A1%E5%88%86%E5%B1%82.md)
